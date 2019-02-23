@@ -1,0 +1,9 @@
+export const FETCH_PRODUCTS = 'app/products/FETCH_PRODUCTS';
+export const FETCH_PRODUCTS_SUCCESS = 'app/products/FETCH_PRODUCTS_SUCCESS';
+export const FETCH_PRODUCTS_FAILURE = 'app/products/FETCH_PRODUCTS_FAILURE';
+export const RESET_FETCH_PRODUCTS = 'app/products/RESET_FETCH_PRODUCTS';
+export const FETCH_PRODUCT = 'app/products /FETCH_PRODUCT';
+export const FETCH_PRODUCT_SUCCESS = 'app/products /FETCH_PRODUCT_SUCCESS';
+export const FETCH_PRODUCT_FAILURE = 'app/products /FETCH_PRODUCT_FAILURE';
+export const RESET_FETCH_PRODUCT = 'app/products /RESET_FETCH_PRODUCT';
+export const SHOW_PRODUCT = 'app/products/SHOW_PRODUCT';
