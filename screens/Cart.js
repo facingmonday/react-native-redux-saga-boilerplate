@@ -4,7 +4,8 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { Container, Content, Item, Input } from 'native-base';
 import {
-  selectCart
+  selectCart,
+  selectTotal
 } from '../selectors/cart';
 import {
   deleteItem,
@@ -16,6 +17,7 @@ import Cart from '../components/Cart';
 
 const mapStateToProps = createStructuredSelector({
   cart: selectCart(),
+  total: selectTotal(),
 });
 
 const mapDispatchToProps = dispatch => ({

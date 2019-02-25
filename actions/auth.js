@@ -5,6 +5,7 @@ import {
   LOGIN_USER,
   LOGIN_USER_SUCCESS,
   LOGIN_USER_FAILURE,
+  LOGOUT,
 } from '../constants/auth';
 
 export function fetchMe() {
@@ -41,5 +42,10 @@ export function loginUserFailure(error) {
   return {
     type: LOGIN_USER_FAILURE,
     error,
+  };
+}
+export function logout() {
+  return {
+    type: LOGOUT,
   };
 }

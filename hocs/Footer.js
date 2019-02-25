@@ -12,11 +12,11 @@ import {
 } from '../actions/app';
 
 import { selectAuth } from '../selectors/auth';
-import SideBar from '../components/SideBar';
+import Footer from '../components/Footer';
 
-const Component = (props) => <SideBar {...props} />
+const Component = (props) => <Footer {...props} />
 
-SideBar.propTypes = {
+Component.propTypes = {
   fetchAuth: PropTypes.func,
 };
 

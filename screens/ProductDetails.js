@@ -2,18 +2,16 @@ import React from 'react';
 import { createStructuredSelector } from 'reselect';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
-import {
-  View,
-  Image,
-  Dimensions,
-  Keyboard,
-} from 'react-native';
 import Header from '../components/Header';
 import { Container, Content, Item, Input } from 'native-base';
-import ProductList from '../components/ProductList';
+import ProductDetail from '../components/ProductDetail';
 import {
   selectActiveProduct,
 } from '../selectors/products';
+import {
+  fetchProduct,
+  addItemToCart
+} from '../actions/cart';
 
 const mapStateToProps = createStructuredSelector({
   product: selectActiveProduct(),
@@ -21,6 +19,7 @@ const mapStateToProps = createStructuredSelector({
 
 const mapDispatchToProps = dispatch => ({
   fetchProduct: () => dispatch(fetchProduct()),
+  addItemToCart: (product) => dispatch(addItemToCart(product))
 });
 
 let styles = {
@@ -38,7 +37,7 @@ class ProductDetails extends React.Component {
       <Container>
         <Header title={'Products'}/>
         <Content>
-          <ProductList {...this.props} />
+          <ProductDetail {...this.props} />
         </Content>
       </Container>
     )

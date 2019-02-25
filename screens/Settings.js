@@ -2,7 +2,6 @@ import React from 'react';
 import { createStructuredSelector } from 'reselect';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
-
 import {
   selectAuthObject,
 } from '../selectors/auth';
@@ -11,15 +10,8 @@ import {
   logoutUser,
 } from '../actions/auth';
 
-
-import {
-  View,
-  Image,
-  Dimensions,
-  Keyboard,
-} from 'react-native';
 import Header from '../components/Header';
-import { Container, Content, Item, Input } from 'native-base';
+import { Container, Content, Text, Item, Input } from 'native-base';
 // import SettingsList from '../components/SettingsList';
 
 const mapStateToProps = createStructuredSelector({

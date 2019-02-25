@@ -13,9 +13,8 @@ app.use(cors({
 }));
 
 app.get('/users/me', (req, res) => {
-  console.log('req.headers', req.headers);
   if (req.headers.authorization) {
-    return res.json({
+    return res.status(200).json({
       name: 'Test User',
       email: 'test@test.com',
     });

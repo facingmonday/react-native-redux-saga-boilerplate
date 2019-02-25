@@ -1,5 +1,6 @@
 export default {
   API_HOST: 'http://localhost:9000',
+  AUTH_TOKEN_KEY: 'jmpstrt',
   STRIPE_PUBLIC_KEY: 'hfbkhjadsfbajkhdfb',
   ROLES: {
     ADMIN: 'admin',

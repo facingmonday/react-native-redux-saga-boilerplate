@@ -77,6 +77,51 @@ const SideBarMenu = (props) => {
           <Icon name="arrow-forward" />
         </Right>
       </ListItem>
+      <ListItem icon onPress={() => {
+        props.navigate('cart');
+      }}>
+        <Left>
+          <Button transparent>
+            <Icon type="FontAwesome" name="shopping-cart" />
+          </Button>
+        </Left>
+        <Body style={{ }}>
+          <Text>Cart</Text>
+        </Body>
+        <Right>
+          <Icon name="arrow-forward" />
+        </Right>
+      </ListItem>
+      <ListItem icon onPress={() => {
+        props.navigate('cart');
+      }}>
+        <Left>
+          <Button transparent>
+            <Icon type="FontAwesome" name="shopping-bag" />
+          </Button>
+        </Left>
+        <Body style={{ }}>
+          <Text>Checkout</Text>
+        </Body>
+        <Right>
+          <Icon name="arrow-forward" />
+        </Right>
+      </ListItem>
+      <ListItem icon onPress={() => {
+        props.logout();
+      }}>
+        <Left>
+          <Button transparent>
+            <Icon type="FontAwesome" name="sign-out" />
+          </Button>
+        </Left>
+        <Body style={{ }}>
+          <Text>Logout</Text>
+        </Body>
+        <Right>
+          <Icon name="arrow-forward" />
+        </Right>
+      </ListItem>
     </List>
   );
 }

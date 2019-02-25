@@ -4,6 +4,7 @@ import AuthReducer from './auth';
 import DashboardReducer from './dashboard';
 import AppReducer from './app';
 import ProductReducer from './products';
+import CartReducer from './cart';
 
 const rootReducer = combineReducers({
   app: AppReducer,
@@ -11,6 +12,7 @@ const rootReducer = combineReducers({
   auth: AuthReducer,
   dashboard: DashboardReducer,
   products: ProductReducer,
+  cart: CartReducer
 });
 
 export default rootReducer;

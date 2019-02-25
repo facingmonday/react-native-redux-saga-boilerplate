@@ -1,14 +1,13 @@
 import { buildUrl, getAuthToken } from './utils';
 
-export const fetchMe = async () => {
+export const fetchMe = async (token) => {
   const url = buildUrl('/users/me');
   const body = {
     Accept: 'application/json',
     'Content-Type': 'application/json',
   }
-  const auth = await getAuthToken('jmpstrt-auth');
-  if(auth) {
-    body.authorization = auth;
+  if(token) {
+    body.authorization = token;
   }
   return fetch(url, {
     method: 'GET',

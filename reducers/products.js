@@ -8,6 +8,11 @@ import {
 } from '../constants/products';
 
 const initialState = {
+  activeProduct: {
+    error: null,
+    loading: false,
+    product: {}
+  },
   productList: {
     error: null,
     loading: false,
@@ -17,23 +22,19 @@ const initialState = {
 
 export default (state = initialState, action) => {
   let error;
-  console.log('action in reducer', action);
   switch (action.type) {
     case FETCH_PRODUCT:
       return { ...state, loading: true };
     case FETCH_PRODUCT_SUCCESS:
-      return { dashboard: action.payload, error: null, loading: false };
+      return { ...state, activeProduct: { product: action.result, error: null, loading: false }};
     case FETCH_PRODUCT_FAILURE:
-      error = action.payload || { message: action.payload.message };
-      return { dashboard: null, error, loading: false };
+      return { ...state, activeProduct: { product: [], error: action.error, loading: false }};
     case FETCH_PRODUCTS:
       return { ...state, loading: true };
     case FETCH_PRODUCTS_SUCCESS:
-      console.log('FETCH_PRODUCTS_SUCCESS', action)
       return { ...state, productList: { products: action.results, error: null, loading: false }};
     case FETCH_PRODUCTS_FAILURE:
-      error = action.payload || { message: action.payload.message };
-      return { dashboard: null, error, loading: false };
+      return { ...state, productList: { products: action.results, error: null, loading: false }};
     default:
       return state;
   }
