@@ -29,7 +29,6 @@ function* performFetchMeAction(action) {
       Actions.dashboard();
     }
   } catch (e) {
-    console.log('e', e);
     yield put(fetchMeFailure(e));
     Actions.login();
   }

@@ -55,7 +55,7 @@ app.get('/products', (req, res) => {
 });
 
 app.listen(9000, () => {  
-  console.log('My API is running...');
+  console.log('Dev API is running on port 9000...');
 });
 
 module.exports = app;

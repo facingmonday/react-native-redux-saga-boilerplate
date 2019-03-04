@@ -5,7 +5,6 @@ import {
 } from '../constants/app';
 
 export function openDrawer() {
-  console.log('openDraw');
   return {
     type: OPEN_DRAWER,
   };

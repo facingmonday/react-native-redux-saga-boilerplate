@@ -25,7 +25,6 @@ function* performFetchProductsAction(action) {
   try {
     const response = yield call(fetchProductsApi, action.options);
     if (response) {
-      console.log('response', response);
       yield put(fetchProductsSuccess(response));
     }
   } catch (e) {
@@ -51,7 +50,6 @@ export function* showProductSaga() {
 }
 
 function* performShowProduct(action) {
-  console.log('showProduct');
   Actions.productDetails();
 }
 

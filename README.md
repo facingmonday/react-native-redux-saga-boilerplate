@@ -1,6 +1,14 @@
 # React Native Redux Saga Boilerplate
-
 A boilerplate for creating a react native app using redux, redux-saga, and reselect with native-base ui
+
+## ToDo
+Setup ESLint
+Sass Support
+Finish Cart
+Checkout Page
+Social Login
+Optional Payment Processing
+Component Unit testing
 
 ## Getting Started
 

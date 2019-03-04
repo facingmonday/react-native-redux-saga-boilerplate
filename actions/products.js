@@ -46,7 +46,6 @@ export function fetchProductsFailure(error) {
   };
 }
 export function showProduct(productId) {
-  console.log('showProdut');
   return {
     type: SHOW_PRODUCT,
     productId,

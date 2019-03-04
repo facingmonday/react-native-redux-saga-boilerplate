@@ -28,7 +28,6 @@ export const fetchMe = async (token) => {
 }
 export function loginUser(credentials) {
   const url = buildUrl('/auth/local');
-  console.log('url', url);
   return fetch(url, {
     method: 'POST',
     headers: new Headers({
@@ -41,13 +40,8 @@ export function loginUser(credentials) {
       if (response.status === 200) {
         return response.json();
       }
-      if (response.status === 401) {
-        const e = new Error();
-        e.code = 401;
-        throw e;
-      }
-      return {};
+      const e = new Error();
+      e.code = response.status;
+      throw e;
     })
-    .catch((e) => console.log(e))
-    ;
 }

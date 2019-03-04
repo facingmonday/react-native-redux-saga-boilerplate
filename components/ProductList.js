@@ -9,7 +9,6 @@ export default class ProductList extends Component {
     this.props.fetchProducts();
   }
   render() {
-    console.log('this.props', this.props);
     const { loading, error, products } = this.props.products;
     if(loading) {
       return <Loading />

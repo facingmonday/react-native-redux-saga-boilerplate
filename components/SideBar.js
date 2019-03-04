@@ -134,7 +134,6 @@ SideBarMenu.propTypes = {
 
 class SideBar extends Component { // eslint-disable-line react/prefer-stateless-function
   render() {
-    console.log('auth', this.props.auth);
     return (
       <View style={{flex: 1, backgroundColor: '#fff'}}>
         <SideBarHeader user={this.props.auth.user}/>

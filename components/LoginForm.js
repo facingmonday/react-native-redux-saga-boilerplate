@@ -7,11 +7,19 @@ import {
   Keyboard,
 } from 'react-native';
 import { Container, Header, Content, Item, Label, Input, Text, Button } from 'native-base';
+import SocialButton from './SocialButton';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
+  },
+  input: {
+    margin: 10,
+  },
+  socialButtons: {
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
   },
   headingContainer: {
     flex: 1,
@@ -40,15 +48,21 @@ export default class LoginForm extends React.Component {
         <View style={styles.headingContainer}>
           <Text style={styles.heading}></Text>
         </View>
+        <View style={[styles.container, styles.socialButtons]}>
+          <SocialButton facebook onPress={this.onPressFacebook} />
+          <SocialButton twitter onPress={this.onPressTwitter} />
+          <SocialButton instagram onPress={this.onPressInstagram} />
+          <SocialButton google onPress={this.onPressGoogle} />
+        </View>
         <View>
-          <Item rounded style={{}}>
+          <Item style={styles.input}>
             <Input
               placeholder='Email'
               value={this.state.username}
               onChangeText={(text) => this.setState({username: text})}
             />
           </Item>
-          <Item rounded style={{}}>
+          <Item style={styles.input}>
             <Input
                 placeholder='Password'
                 value={this.state.password}
