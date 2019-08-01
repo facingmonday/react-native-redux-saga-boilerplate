@@ -1,8 +1,3 @@
-import Cookies from 'universal-cookie';
-
-
-const cookies = new Cookies();
-
 /**
  * setCookie  - Sets a cookie in the user's browser
  * @param {String} name     Name/key of cookie to save
